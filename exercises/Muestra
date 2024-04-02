@@ -1,0 +1,9 @@
+variable_01 = False
+variable_02 = True
+variable_03 = 80
+variable_04 = "90"
+variable_05 = 100
+
+# COMPLETAR - INICIO
+resultado = not variable_02 or variable_03 or variable_04 ro variable_05 or variable_01
+print(resultado)

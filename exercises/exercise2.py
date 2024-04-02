@@ -1,6 +1,5 @@
 """Lógica Simple y Cortocircuito"""
 
-
 """
 Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
 True si al menos una de las variables es True.
@@ -10,11 +9,11 @@ esta_lloviendo = True
 riego_activado = True
 
 # COMPLETAR - INICIO
-
+piso_mojado=esta_lloviendo or riego_activado
+print (piso_mojado)
 # COMPLETAR - FIN
 
 assert piso_mojado
-
 
 """
 Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
@@ -26,7 +25,8 @@ lado_cuadrado = 5
 area_cuadrado = pow(lado_cuadrado, 2)
 
 # COMPLETAR - INICIO
-
+area_mayor_cinco = not (area_cuadrado <=lado_cuadrado)
+print (area_mayor_cinco)
 # COMPLETAR - FIN
 
 assert area_mayor_a_cinco
@@ -41,8 +41,12 @@ numero_1 = 49
 numero_2 = 50
 
 # COMPLETAR - INICIO
+es_divisible_numero_1 = (numero_1 % 7 == 0) and not (numero_2 % 7 == 0)
+no_es_divisible_numero_2 = not (numero_2 % 7 == 0)
 
-# COMPLETAR - FIN
+resultado = es_divisible_numero_1 and no_es_divisible_numero_2
+print(resultado)
+print("el segundo numero no es divisible.", no_es_divisible_numero_2)
 
 assert resultado
 
@@ -60,7 +64,7 @@ variable_04 = "90"
 variable_05 = 100
 
 # COMPLETAR - INICIO
-
+resultado = variable_01 or variable_02 or (not variable_03) or (not variable_04) or (not variable_05)
 # COMPLETAR - FIN
 
 assert resultado == 80
