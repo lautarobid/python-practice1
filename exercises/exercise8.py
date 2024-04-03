@@ -1,6 +1,5 @@
 """Diccionarios"""
 
-
 """
 Definir un diccionario para un 'Cliente' que contenga los siguiente valores:
 - Clave "Nombre", valor de tipo string: "Mario Pedernera"
@@ -8,8 +7,14 @@ Definir un diccionario para un 'Cliente' que contenga los siguiente valores:
 - Clave "Domicilio", valor de tipo string: Los alamos 4509"
 - Clave "Compras", valor de tipo lista: ["cafetera", "TV 50 pulgadas", "mouse gamer"]
 """
-
 # COMPLETAR - INICIO
+
+Cliente = {"Nombre": 
+           "Mario Pedernera", 
+           "DNI": 56895632, 
+           "Domicilio": "Los alamos 4509", 
+           "Compras": ["cafetera", "TV 50 pulgadas", "mouse gamer"]}
+print(Cliente)
 
 # COMPLETAR - FIN
 
@@ -20,7 +25,6 @@ assert (
     and (Cliente["Compras"] == ["cafetera", "TV 50 pulgadas", "mouse gamer"])
 )
 
-
 """
 Definir un diccionario para las 'Compras' que contenga los siguiente valores:
 - Clave "Mario Pedernera", valor de tipo lista: ["cafetera", "TV 50 pulgadas", "mouse gamer"]
@@ -29,15 +33,18 @@ Definir un diccionario para las 'Compras' que contenga los siguiente valores:
 """
 
 # COMPLETAR - INICIO
-
+compras = {
+    "Mario Pedernera": ["cafetera", "TV 50 pulgadas", "mouse gamer"],
+    "Ezequiel Castello": ["ipad", "ipod", "iphone"],
+    "Pablo Piristrelli": ["Reproductor de CD", "Videograbadora"]
+}
+print(compras)
 # COMPLETAR - FIN
-
 assert (
     (Compras["Mario Pedernera"] == ["cafetera", "TV 50 pulgads", "mouse gamer"])
     and (Compras["Ezequiel Castello"] == ["ipad", "ipod", "iphone"])
     and (Compras["Pablo Piristrelli"] == ["Reproductor de CD", "Videograbadora"])
 )
-
 
 """
 Dado el siguiente diccionario obtener el valor de la "clave1" utilizando el metodo get y
@@ -52,31 +59,32 @@ diccionario = {
 }
 
 # COMPLETAR - INICIO
+clave1 = diccionario.get("clave1")
+print(clave1) 
 
 # COMPLETAR - FIN
 
 assert clave1 == 234
-
 
 """
 Dado el siguiente diccionario forzar la obtención de un valor por defecto igual a 5 utilizando
 el metodo get y almacenarlo en la variable clave5
 Restricción: Se debe intentar obtener un valor para la clave inexistente "clave5"
 """
-
 diccionario_2 = {
     "clave1": 234567,
     "clave2": False,
     "clave3": "Valor 13",
     "clave4": [1, 2, 3, 4, 5, 6],
 }
-
 # COMPLETAR - INICIO
+
+clave5 = diccionario_2.get("clave5", 5)
+print(clave5)
 
 # COMPLETAR - FIN
 
 assert clave5 == 5
-
 
 """
 Dado el siguiente diccionario obtener una lista de todas sus claves por medio del método keys
@@ -88,31 +96,29 @@ diccionario_3 = {
     "clave3": "Valor 1",
     "clave4": [1, 2, 3, 4],
 }
-
 # COMPLETAR - INICIO
-
+claves = list(diccionario_3.keys())
+print(claves)
 # COMPLETAR - FIN
 
 assert keys == ["clave1", "clave2", "clave3", "clave4"]
 
-
 """
 Dado el siguiente diccionario obtener una lista de todas sus valores por medio del método values
 """
-
 diccionario_4 = {
     "clave1": 1234,
     "clave2": 4567,
     "clave3": 8910,
     "clave4": 1112,
 }
-
 # COMPLETAR - INICIO
+valores = list(diccionario_4.values())
 
+print(valores) 
 # COMPLETAR - FIN
 
 assert values == [1234, 4567, 8910, 1112]
-
 
 """
 Dado el siguiente diccionario obtener una lista de sus claves y sus valores uno a continuación
@@ -127,6 +133,9 @@ diccionario_5 = {
 }
 
 # COMPLETAR - INICIO
+
+claves_y_valores = list(diccionario_5.items())
+print(claves_y_valores)
 
 # COMPLETAR - FIN
 
@@ -152,7 +161,9 @@ diccionario_7 = {
 }
 
 # COMPLETAR - INICIO
+diccionario_6.update(diccionario_7)
 
+print(diccionario_6)
 # COMPLETAR - FIN
 
 assert diccionario_6 == {1: 1111, 2: 2223, 3: 3334, 4: 4444, 5: 5555, 6: 6666}
