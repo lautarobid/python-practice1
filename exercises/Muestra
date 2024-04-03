@@ -1,9 +1,7 @@
-variable_01 = False
-variable_02 = True
-variable_03 = 80
-variable_04 = "90"
-variable_05 = 100
+tupla = ("anoche", "fui", "a", "la", "fiesta", "pero", "no", "pude", "entrar")
 
 # COMPLETAR - INICIO
-resultado = not variable_02 or variable_03 or variable_04 ro variable_05 or variable_01
-print(resultado)
+primer, segundo, tercero, cuarto, quinto, *_ = tupla
+string_concatenado = f"{primer} {segundo} {tercero} {cuarto} {quinto}"
+print(string_concatenado)
+# COMPLETAR - FIN
